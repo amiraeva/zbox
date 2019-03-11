@@ -2,10 +2,13 @@ extern crate libflate;
 extern crate pkg_config;
 extern crate reqwest;
 extern crate tar;
+extern crate neon_build;
 
 use std::env;
 
 fn main() {
+    neon_build::setup(); // must be called in build.rs
+
     #[cfg(feature = "libsodium-bundled")]
     download_and_install_libsodium();
 

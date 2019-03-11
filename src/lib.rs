@@ -179,3 +179,6 @@ extern crate web_sys;
 
 #[cfg(feature = "storage-zbox-wasm")]
 extern crate wasm_logger;
+
+#[macro_use]
+extern crate neon;
